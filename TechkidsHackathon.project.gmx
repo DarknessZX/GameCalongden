@@ -5,9 +5,21 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_fish_lantern</sprite>
+    <sprite>sprites\spr_flashlight</sprite>
+    <sprite>sprites\spr_enemyfish</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\obj_fishlantern</object>
+    <object>objects\obj_flashlight</object>
+    <object>objects\obj_enemyfish</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\room</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
