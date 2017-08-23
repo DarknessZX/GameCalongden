@@ -25,7 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>player_speed = 10
+            <string>player_speed = 10;
+
+move_left = ord('A');
+move_right = ord('D');
+move_down = ord('S');
+move_up = ord('W');
 </string>
           </argument>
         </arguments>
@@ -48,11 +53,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>vmove = keyboard_check(ord('A')) + ( keyboard_check(ord('D')) * -1 );
-hmove = keyboard_check(ord('W')) + ( keyboard_check(ord('S')) * -1 );
+            <string>hmove = (keyboard_check(move_left) * -1) + keyboard_check(move_right);
+vmove = (keyboard_check(move_up) * -1) + keyboard_check(move_down);
 
-vspeed = player_speed * vmove;
 hspeed = player_speed * hmove;
+vspeed = player_speed * vmove;
+
+
+show_debug_message(x + hspeed);
+if (x + hspeed &gt;= room_width - sprite_width  || x + hspeed &lt;= 0) {
+    hspeed = 0;
+}
+
+if (y + vspeed &gt;= room_height - sprite_height || y + vspeed &lt;= 0) {
+    vspeed = 0;
+}
 </string>
           </argument>
         </arguments>

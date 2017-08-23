@@ -18,8 +18,8 @@
     <object>objects\obj_enemyfish</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\intro</room>
     <room>rooms\room</room>
+    <room>rooms\intro</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
