@@ -14,6 +14,7 @@
     <sprite>sprites\spr_foodfish</sprite>
     <sprite>sprites\spr_fish_lantern_eat</sprite>
     <sprite>sprites\spr_fish_lantern_dead</sprite>
+    <sprite>sprites\spr_start_button</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
