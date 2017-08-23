@@ -16,6 +16,7 @@
     <object>objects\obj_fishlantern</object>
     <object>objects\obj_flashlight</object>
     <object>objects\obj_enemyfish</object>
+    <object>objects\obj_calculate_score</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_game</room>
