@@ -32,6 +32,7 @@ ff_cd_init = room_speed * 5;
 food_fish_min_number = 0;
 food_fish_max_number = 5;
 food_fish_spawn_cd = ff_cd_init;
+ff_health = 1;
 
 //Enemy fish
 ef_cd_init = room_speed * 5;

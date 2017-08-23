@@ -90,7 +90,7 @@ gravity_setting = 2;
 
 vspeed = player_speed * vmove;
 
-if (y + vspeed &gt;= room_height - sprite_height || y + vspeed &lt;= 0) {
+if (y + vspeed &gt;= room_height - sprite_height || y + vspeed &lt;= 0 || dead) {
     vspeed = 0;
 }
 
@@ -104,6 +104,7 @@ if (place_meeting(x,y,obj_foodfish)) {
     score += obj_calculate.score_increase;
     ffinstance = instance_place(x,y,obj_foodfish);
     audio_play_sound(snd_bite,1,false);
+    health += obj_spawn_control.ff_health;
     with (ffinstance) {
         instance_destroy();
     }
@@ -112,9 +113,13 @@ if (place_meeting(x,y,obj_foodfish)) {
 if (health &lt;= 0) {
     dead = true;
     sprite_index = spr_fish_lantern_dead;
-}
-
-if (dead == true) {
+    if (file_exists("Save.sav"))  {
+        ini_open("Save.sav");
+        var highscore = score;
+        if (highscore &gt; ini_read_real("Save1", "score", 0)) 
+            ini_write_real("Save1", "score", highscore);
+        ini_close();
+    }
 }
 
 if (dead == true &amp;&amp; image_index &gt;= image_number - 1) {
