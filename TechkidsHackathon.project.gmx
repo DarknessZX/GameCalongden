@@ -12,6 +12,8 @@
     <sprite>sprites\spr_flashlight</sprite>
     <sprite>sprites\spr_enemyfish</sprite>
     <sprite>sprites\spr_foodfish</sprite>
+    <sprite>sprites\spr_fish_lantern_eat</sprite>
+    <sprite>sprites\spr_fish_lantern_dead</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
