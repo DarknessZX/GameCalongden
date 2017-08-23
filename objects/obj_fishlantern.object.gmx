@@ -97,6 +97,15 @@ if (y + gravity &lt;= 0) {
 } else {
     gravity = gravity_setting;
 }
+
+if (place_meeting(x,y,obj_foodfish)) {
+    score += obj_calculate.score_increase;
+    ffinstance = instance_place(x,y,obj_foodfish);
+    audio_play_sound(snd_bite,1,false);
+    with (ffinstance) {
+        instance_destroy();
+    }
+}
 </string>
           </argument>
         </arguments>

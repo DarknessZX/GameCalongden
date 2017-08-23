@@ -19,6 +19,9 @@
     <background>background\background</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\spawn_food_fish.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_fishlantern</object>
     <object>objects\obj_flashlight</object>

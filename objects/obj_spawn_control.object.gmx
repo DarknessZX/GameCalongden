@@ -25,6 +25,65 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///Init value
+
+//Food fish
+ff_cd_init = room_speed * 5;
+food_fish_min_number = 0;
+food_fish_max_number = 5;
+food_fish_spawn_cd = ff_cd_init;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Fish food control
+food_fish_spawn_cd -= 1;
+
+//spawn food fish
+if (food_fish_spawn_cd &lt;= 0) {
+    ffx = room_width + 10;
+    ffy = irandom_range(20, room_height);
+    instance_create(ffx, ffy, obj_foodfish);
+    food_fish_spawn_cd = irandom_range(room_speed,ff_cd_init);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string></string>
           </argument>
         </arguments>

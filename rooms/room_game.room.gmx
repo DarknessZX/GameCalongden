@@ -54,6 +54,7 @@ global.gravity_direction_setting = 90;</code>
   <instances>
     <instance objName="obj_fishlantern" x="96" y="160" name="inst_AA57B7FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_calculate" x="704" y="0" name="inst_08F77998" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spawn_control" x="704" y="160" name="inst_18C65A1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

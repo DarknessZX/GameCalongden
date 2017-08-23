@@ -27,10 +27,15 @@
             <kind>1</kind>
             <string>score = 0;
 health = 100;
+
+score_increase = 10;
 time_increase= 10;
 additional_increase = 5;
 min_decrease = 1;
 max_decrease = 10;
+
+ff_score = score_increase;
+ff_health = 1;
 </string>
           </argument>
         </arguments>
@@ -223,7 +228,7 @@ max_decrease = 10;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>score += 10;
+            <string>score += score_increase;
 </string>
           </argument>
         </arguments>
