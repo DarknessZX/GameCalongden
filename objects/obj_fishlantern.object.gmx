@@ -113,18 +113,20 @@ if (place_meeting(x,y,obj_foodfish)) {
 if (health &lt;= 0) {
     dead = true;
     sprite_index = spr_fish_lantern_dead;
-    if (file_exists("Save.sav"))  {
-        ini_open("Save.sav");
-        var highscore = score;
-        if (highscore &gt; ini_read_real("Save1", "score", 0)) 
-            ini_write_real("Save1", "score", highscore);
-        ini_close();
-    }
+    ini_open("Save.ini");
+    highscore = score;
+    if (highscore &gt; ini_read_real("Save1", "score", 0)) 
+        ini_write_real("Save1", "score", highscore);
+    ini_close();
 }
 
 if (dead == true &amp;&amp; image_index &gt;= image_number - 1) {
     image_index = image_number - 1;
     image_speed = 0;
+    if (room_next(room) != -1)
+    {
+        room_goto_next();
+    }
 }
 
 

@@ -24,6 +24,9 @@
   <scripts name="scripts">
     <script>scripts\spawn_food_fish.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_fishlantern</object>
     <object>objects\obj_flashlight</object>
