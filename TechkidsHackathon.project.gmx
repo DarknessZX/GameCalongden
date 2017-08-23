@@ -9,8 +9,11 @@
     <sprite>sprites\spr_fish_lantern</sprite>
     <sprite>sprites\spr_flashlight</sprite>
     <sprite>sprites\spr_enemyfish</sprite>
+    <sprite>sprites\spr_foodfish</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background</background>
+  </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_fishlantern</object>
