@@ -31,6 +31,9 @@ move_left = ord('A');
 move_right = ord('D');
 move_down = ord('S');
 move_up = ord('W');
+
+gravity_direction = 90;
+gravity_setting = 2;
 </string>
           </argument>
         </arguments>
@@ -87,6 +90,12 @@ vspeed = player_speed * vmove;
 
 if (y + vspeed &gt;= room_height - sprite_height || y + vspeed &lt;= 0) {
     vspeed = 0;
+}
+
+if (y + gravity &lt;= 0) {
+    gravity = 0;
+} else {
+    gravity = gravity_setting;
 }
 </string>
           </argument>
