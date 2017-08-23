@@ -21,11 +21,15 @@
     <object>objects\obj_fishlantern</object>
     <object>objects\obj_flashlight</object>
     <object>objects\obj_enemyfish</object>
-    <object>objects\obj_calculate_score</object>
+    <object>objects\obj_calculate</object>
+    <object>objects\obj_foodfish</object>
+    <object>objects\obj_display_score</object>
+    <object>objects\obj_spawn_control</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_game</room>
     <room>rooms\intro</room>
+    <room>rooms\room_game</room>
+    <room>rooms\room_end</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
