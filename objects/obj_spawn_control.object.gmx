@@ -32,6 +32,10 @@ ff_cd_init = room_speed * 5;
 food_fish_min_number = 0;
 food_fish_max_number = 5;
 food_fish_spawn_cd = ff_cd_init;
+
+//Enemy fish
+ef_cd_init = room_speed * 5;
+ef_spawn_cd = ef_cd_init;
 </string>
           </argument>
         </arguments>
@@ -84,7 +88,17 @@ if (food_fish_spawn_cd &lt;= 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>///Enemy fish control
+ef_spawn_cd -= 1;
+
+//spawn food fish
+if (ef_spawn_cd &lt;= 0) {
+    efx = room_width + 10;
+    efy = irandom_range(20, room_height);
+    instance_create(ffx, ffy, obj_enemyfish);
+    ef_spawn_cd = irandom_range(room_speed,ef_cd_init);
+}
+</string>
           </argument>
         </arguments>
       </action>

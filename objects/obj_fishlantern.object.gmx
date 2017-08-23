@@ -114,6 +114,9 @@ if (health &lt;= 0) {
     sprite_index = spr_fish_lantern_dead;
 }
 
+if (dead == true) {
+}
+
 if (dead == true &amp;&amp; image_index &gt;= image_number - 1) {
     image_index = image_number - 1;
     image_speed = 0;
