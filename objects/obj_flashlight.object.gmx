@@ -52,6 +52,10 @@ gravity_direction = obj_fishlantern.gravity_direction;
             <string>vspeed = obj_fishlantern.vspeed;
 hspeed = obj_fishlantern.hspeed;
 gravity = obj_fishlantern.gravity;
+
+if (obj_fishlantern.dead == true) {
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>

@@ -25,12 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>player_speed = 10;
+            <string>///Init fish value
+player_speed = 10;
 
 move_left = ord('A');
 move_right = ord('D');
 move_down = ord('S');
 move_up = ord('W');
+dead = false;
 
 gravity_direction = 90;
 gravity_setting = 2;
@@ -106,6 +108,18 @@ if (place_meeting(x,y,obj_foodfish)) {
         instance_destroy();
     }
 }
+
+if (health &lt;= 0) {
+    dead = true;
+    sprite_index = spr_fish_lantern_dead;
+}
+
+if (dead == true &amp;&amp; image_index &gt;= image_number - 1) {
+    image_index = image_number - 1;
+    image_speed = 0;
+}
+
+
 </string>
           </argument>
         </arguments>
