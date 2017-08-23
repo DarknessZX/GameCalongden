@@ -15,7 +15,6 @@
     <sprite>sprites\spr_fish_lantern_eat</sprite>
     <sprite>sprites\spr_fish_lantern_dead</sprite>
     <sprite>sprites\spr_start_button</sprite>
-    <sprite>sprites\spr_start_button_lightoff</sprite>
     <sprite>sprites\spr_overlay</sprite>
   </sprites>
   <backgrounds name="background">
