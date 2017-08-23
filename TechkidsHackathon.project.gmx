@@ -29,8 +29,8 @@
     <object>objects\obj_spawn_control</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\intro</room>
     <room>rooms\room_game</room>
+    <room>rooms\intro</room>
     <room>rooms\room_end</room>
   </rooms>
   <help>
