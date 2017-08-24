@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>///Init enemy fish
-min_speed = 5;
-max_speed = 20;
+min_speed = 10;
+max_speed = 25;
 
 hspeed = irandom_range(min_speed, max_speed)*(-1);
 </string>

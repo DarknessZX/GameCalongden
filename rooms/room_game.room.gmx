@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>score = 0;
+  <code>randomize();
+score = 0;
 global.gravity_setting = 2;
 global.gravity_direction_setting = 90;</code>
   <enableViews>0</enableViews>

@@ -86,9 +86,11 @@ gravity_setting = 2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>vmove = (keyboard_check(move_up) * -1) + keyboard_check(move_down);
+            <string>vdirection = (keyboard_check(move_up) * -1) + keyboard_check(move_down);
 
-vspeed = player_speed * vmove;
+vmove = player_speed * vdirection;
+
+vspeed = vmove;
 
 if (y + vspeed &gt;= room_height - sprite_height || y + vspeed &lt;= 0 || dead) {
     vspeed = 0;
@@ -100,13 +102,17 @@ if (y + gravity &lt;= 0) {
     gravity = gravity_setting;
 }
 
-if (place_meeting(x,y,obj_foodfish)) {
-    score += obj_calculate.score_increase;
-    ffinstance = instance_place(x,y,obj_foodfish);
-    audio_play_sound(snd_bite,1,false);
-    health += obj_spawn_control.ff_health;
-    with (ffinstance) {
-        instance_destroy();
+if (place_meeting(x + 20,y,obj_foodfish)) {
+    sprite_index = spr_fish_lantern_eat;
+    if (sprite_index == spr_fish_lantern_eat &amp;&amp; image_index &gt;= image_number - 1) {
+        score += obj_calculate.score_increase;
+        ffinstance = instance_place(x,y,obj_foodfish);
+        audio_play_sound(snd_bite,1,false);
+        health += obj_spawn_control.ff_health;
+        with (ffinstance) {
+            instance_destroy();
+        }
+        sprite_index = spr_fish_lantern;
     }
 }
 
@@ -123,9 +129,11 @@ if (health &lt;= 0) {
 if (dead == true &amp;&amp; image_index &gt;= image_number - 1) {
     image_index = image_number - 1;
     image_speed = 0;
-    if (room_next(room) != -1)
-    {
-        room_goto_next();
+    if (y &lt; sprite_height + 20) {
+        if (room_next(room) != -1)
+        {
+            room_goto_next();
+        }
     }
 }
 

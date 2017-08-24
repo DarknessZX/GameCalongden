@@ -16,6 +16,10 @@
     <sprite>sprites\spr_fish_lantern_dead</sprite>
     <sprite>sprites\spr_start_button</sprite>
     <sprite>sprites\spr_overlay</sprite>
+    <sprite>sprites\spr_play_again</sprite>
+    <sprite>sprites\spr_tut</sprite>
+    <sprite>sprites\spr_hook</sprite>
+    <sprite>sprites\spr_fishing_net</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -37,6 +41,8 @@
     <object>objects\obj_spawn_control</object>
     <object>objects\obj_overlay</object>
     <object>objects\obj_start_button</object>
+    <object>objects\obj_play_again</object>
+    <object>objects\obj_tut</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\intro</room>
