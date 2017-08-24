@@ -31,6 +31,7 @@ max_speed = 25;
 
 dead = false;
 snd_played = false;
+snd_bite_played = false;
 hspeed = irandom_range(min_speed, max_speed)*(-1);
 </string>
           </argument>
@@ -89,6 +90,10 @@ if (place_meeting(x,y,obj_hook)) {
             <kind>1</kind>
             <string>if (!dead)
     health = 0;
+if (!snd_bite_played) {
+    audio_play_sound(snd_shark_bite, 1, false);
+    snd_bite_played = true;
+}
 </string>
           </argument>
         </arguments>

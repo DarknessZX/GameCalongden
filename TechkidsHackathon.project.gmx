@@ -9,6 +9,7 @@
     <sound>sound\snd_background</sound>
     <sound>sound\snd_hook_lantern</sound>
     <sound>sound\snd_hook_fish</sound>
+    <sound>sound\snd_shark_bite</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_fish_lantern</sprite>
