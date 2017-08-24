@@ -19,7 +19,7 @@
     <sprite>sprites\spr_play_again</sprite>
     <sprite>sprites\spr_tut</sprite>
     <sprite>sprites\spr_hook</sprite>
-    <sprite>sprites\spr_fishing_net</sprite>
+    <sprite>sprites\spr_volcano</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
