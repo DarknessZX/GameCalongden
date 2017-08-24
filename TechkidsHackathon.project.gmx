@@ -21,6 +21,7 @@
     <sprite>sprites\spr_tut</sprite>
     <sprite>sprites\spr_hook</sprite>
     <sprite>sprites\spr_volcano</sprite>
+    <sprite>sprites\spr_end_overlay</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -45,6 +46,8 @@
     <object>objects\obj_play_again</object>
     <object>objects\obj_tut</object>
     <object>objects\obj_background_music</object>
+    <object>objects\obj_dead_fish</object>
+    <object>objects\obj_end_overlay</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\intro</room>
