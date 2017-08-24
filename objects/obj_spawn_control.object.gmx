@@ -28,15 +28,20 @@
             <string>///Init value
 
 //Food fish
-ff_cd_init = room_speed * 5;
+ff_cd_init = room_speed * 2;
 food_fish_min_number = 0;
 food_fish_max_number = 5;
 food_fish_spawn_cd = ff_cd_init;
-ff_health = 1;
+ff_health = 2;
 
 //Enemy fish
 ef_cd_init = room_speed * 5;
 ef_spawn_cd = ef_cd_init;
+
+//Hook
+hook_score_appear = 300;
+hook_cd_init = room_speed * 10;
+hook_spawn_cd = hook_cd_init;
 </string>
           </argument>
         </arguments>
@@ -98,6 +103,36 @@ if (ef_spawn_cd &lt;= 0) {
     efy = irandom_range(20, room_height);
     instance_create(ffx, ffy, obj_enemyfish);
     ef_spawn_cd = irandom_range(room_speed,ef_cd_init);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Hook control
+hook_spawn_cd -= 1;
+
+//spawn food fish
+if (hook_spawn_cd &lt;= 0) {
+    hx = irandom_range(room_width*0.8, room_width);
+    hy = -20;
+    instance_create(hx, hy, obj_hook);
+    hook_spawn_cd = irandom_range(10,hook_cd_init*0.5);
 }
 </string>
           </argument>

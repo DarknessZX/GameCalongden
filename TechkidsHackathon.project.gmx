@@ -48,6 +48,7 @@
     <object>objects\obj_background_music</object>
     <object>objects\obj_dead_fish</object>
     <object>objects\obj_end_overlay</object>
+    <object>objects\obj_hook</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\intro</room>

@@ -30,7 +30,7 @@ health = 100;
 
 score_increase = 10;
 time_increase= 10;
-additional_increase = 5;
+additional_increase = 3;
 min_decrease = 1;
 max_decrease = 10;
 
