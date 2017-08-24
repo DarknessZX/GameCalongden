@@ -35,6 +35,7 @@ move_up = ord('W');
 
 dead = false;
 dead_cd = room_speed * 1.5;
+snd_played = false;
 
 gravity_direction = 90;
 gravity_setting = 2;

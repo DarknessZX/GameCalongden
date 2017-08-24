@@ -30,6 +30,7 @@ min_speed = 10;
 max_speed = 25;
 
 dead = false;
+snd_played = false;
 hspeed = irandom_range(min_speed, max_speed)*(-1);
 </string>
           </argument>
@@ -59,6 +60,10 @@ if (place_meeting(x,y,obj_hook)) {
     x = inthook.x;
     y = inthook.y;
     dead = true;
+    if (!snd_played) {
+        audio_play_sound(snd_hook_fish, 1, false);
+        snd_played = true;
+    }
 }
 </string>
           </argument>

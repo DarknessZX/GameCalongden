@@ -29,6 +29,7 @@
 hookspeed = 10;
 vspeed = hookspeed;
 hspeed = room_speed * (-0.3);
+snd_played = false;
 maxrange = choose(200,300,400,500);
 
 </string>
@@ -80,6 +81,10 @@ maxrange = choose(200,300,400,500);
           <argument>
             <kind>1</kind>
             <string>health = 0;
+if (!snd_played) {
+    audio_play_sound(snd_hook_lantern,1,false);
+    snd_played = true;
+}
 </string>
           </argument>
         </arguments>
